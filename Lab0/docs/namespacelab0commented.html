@@ -73,11 +73,11 @@ $(document).ready(function(){initNavTree('namespacelab0commented.html',''); init
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adc06eaf3b461b2d4f9bf9fcac78ffd33"><td class="memItemLeft" align="right" valign="top"><a id="adc06eaf3b461b2d4f9bf9fcac78ffd33" name="adc06eaf3b461b2d4f9bf9fcac78ffd33"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>led_setup</b> ()</td></tr>
+<tr class="memitem:adc06eaf3b461b2d4f9bf9fcac78ffd33"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelab0commented.html#adc06eaf3b461b2d4f9bf9fcac78ffd33">led_setup</a> ()</td></tr>
+<tr class="memdesc:adc06eaf3b461b2d4f9bf9fcac78ffd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">init function for all Pins.  <br /></td></tr>
 <tr class="separator:adc06eaf3b461b2d4f9bf9fcac78ffd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb449568ee1d3e058a9a3e6d7e3804c6"><td class="memItemLeft" align="right" valign="top"><a id="adb449568ee1d3e058a9a3e6d7e3804c6" name="adb449568ee1d3e058a9a3e6d7e3804c6"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>led_brightness</b> (perc)</td></tr>
+<tr class="memitem:adb449568ee1d3e058a9a3e6d7e3804c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelab0commented.html#adb449568ee1d3e058a9a3e6d7e3804c6">led_brightness</a> (perc)</td></tr>
+<tr class="memdesc:adb449568ee1d3e058a9a3e6d7e3804c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">controll function needs brightness percentage as input  <br /></td></tr>
 <tr class="separator:adb449568ee1d3e058a9a3e6d7e3804c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -88,7 +88,50 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>i</b> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lab0 Documentation Team mecha02: Sydney Gothenquist, Toby Moss Darci-Maher, Tobias Thomas. </p>
-</div></div><!-- contents -->
+<p>The Program should lead to a dimming LED controlled by a STM32 and written in micropython. The LED will be from off to on in 5 secudes and the brighntes will increase every 0.05 secundes </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="adb449568ee1d3e058a9a3e6d7e3804c6" name="adb449568ee1d3e058a9a3e6d7e3804c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb449568ee1d3e058a9a3e6d7e3804c6">&#9670;&#160;</a></span>led_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lab0commented.led_brightness </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>perc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>controll function needs brightness percentage as input </p>
+<p>this function, led_brightness defines the brightness of the led as set by the PWM duty cycle. this duty cycle ranges from 0-100%, and is defined by "value" in the main function </p>
+
+</div>
+</div>
+<a id="adc06eaf3b461b2d4f9bf9fcac78ffd33" name="adc06eaf3b461b2d4f9bf9fcac78ffd33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc06eaf3b461b2d4f9bf9fcac78ffd33">&#9670;&#160;</a></span>led_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def lab0commented.led_setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>init function for all Pins. </p>
+<p>This function, led_setup, sets up the pins for timer 2, channel 1 the A0 pin functions as an output with input from the 3v3 port for the LED. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
