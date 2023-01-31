@@ -6,6 +6,7 @@ class EncoderClass:
     """! 
     This class implements a motor driver for an ME405 kit. 
     """
+    threshold=30000
 
     def __init__ (self, in1pin, in2pin, timerNR):
         """! 
@@ -16,6 +17,9 @@ class EncoderClass:
         self.IN1_Pin=in1pin
         self.IN2_Pin=in2pin
         self.counterTimer=timerNR
+        #self.deltaTime=
+        self.totalPos
+        self.prevCount=0
         
         
         
@@ -40,10 +44,20 @@ class EncoderClass:
                cycle of the voltage sent to the motor 
         """
         print("counter " +str(self.counter.counter())+" for encoderTim: " +str(self.counterTimer))
+        if (self.counter.counter()-self.prevCount <-threshold):
+            self.totalPos+=self.counter.counter()-self.prevCount+65535
+        elif (self.counter.counter()-self.prevCount > threshold):
+            self.totalPos+=self.counter.counter()-self.prevCount-65535          
+        else:
+            self.totalPos+=self.counter.counter()-self.prevCount
+            
+        
+        self.prevCount=self.counter.counter()
         
     def zero(self):
         print("reset counter to 0")
         self.counter.counter(0)
+        self.totalPos=0
         
         
         
