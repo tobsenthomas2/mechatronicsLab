@@ -59,7 +59,7 @@ class MotorDriver:
         and for a positive input we can run CH 2 so it spins the 
         opposite direction for multidirectional capabilities
         """
-        if (level<0): 
+        if (level<0):
             self.ch1.pulse_width_percent (abs(level))
             self.ch2.pulse_width_percent (0)
         else:
