@@ -1,8 +1,7 @@
 
-
-import encoderClassTobi
-import motorDriverClassTobi
-
+import pyb, time
+from encoder_reader import EncoderClass
+from  motor_driver import MotorDriver
 
 
 if __name__ == "__main__":
